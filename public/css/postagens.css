@@ -1,0 +1,228 @@
+
+.postagens {
+    width: 100%;
+    margin-top: 24px;
+}
+
+/* Classes ligadas a cada postagem individual */
+.post {
+    width: 100%;
+    margin-bottom: 60px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+}
+
+.post-topo {  /* Barra no topo da postagem, com a conta que postou */
+    height: 60px;
+    margin: 0px 17px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nome-da-conta {  /* Nome e ícone da conta que postou, esquerda na barra do topo */
+    display: flex;
+    align-items: center;
+}
+
+.nome-da-conta > img {
+    margin-right: 15px;
+}
+
+.nome-da-conta > h1 {
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #262626;
+}
+
+.icone-mais {  /* Ícone de reticências na parte direita da barra do topo */
+    color: #262626;
+    font-size: 16px;
+}
+
+.post > img {  /* Foto postada */
+    width: 100%;
+}
+
+.post > video {  /* Vídeo postado */
+    width: 100%;
+
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #c7c7c7;
+}
+
+.post-baixo {   /* Barra no fim do post, com curtidas e etc, abaixo da foto */
+    height: 76px;
+    padding: 10px 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.post-baixo > div:first-child {  /* Div do menu com botões de curtir, etc */
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-baixo > div:first-child > div {
+    font-size: 22px;
+    letter-spacing: 10px;
+    color: #262626;
+}
+
+.post-baixo > div:last-child {  /* Div com quantidade de curtidas */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.post-baixo > div:last-child > img {
+    margin-right: 5px;
+}
+
+.post-baixo > div:last-child > p {
+    font-family: "Roboto";
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+}
+
+/* Comentários! Olhei algumas fotos de referência e escolhi */
+/* os números no olhômetro mesmo. */
+.comentarios-container {
+    width: 100%;
+    padding: 8px 15px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.comentarios-borda-topo {
+    width: 90%;
+    height: 1px;
+    background-color: #dbdbdb;
+    margin: 0px auto 16px auto;
+}
+
+.comentario {
+    margin-bottom: 16px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comentario-container {
+    display: flex;
+    align-items: center;
+}
+
+.comentario-container > img {
+    margin-right: 11px;
+}
+
+.comentario-container > div {  /* Div com o comentário e likes/tempo abaixo */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.comentario-container > div > p {  /* Comentário e nome de quem comentou */
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+}
+
+.comentario-container > div > div {  /* Likes e tempo abaixo do comentário */
+    margin-top: 6px;
+
+    display: flex;
+}
+
+.comentario-container > div > div > p {
+    width: 50px;
+
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #8e8e8e;
+}
+
+.comentario-container > div > div > p:last-child {
+    width: 150px;
+}
+
+.botao-de-curtir {
+    font-size: 22px;
+    color: #262626;
+}
+
+.adicionar-comentario {
+    margin: 0px 16px 8px 16px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.adicionar-comentario > input {
+    width: 90%;
+    background-color: #fafafa;
+
+    padding: 8px 16px;
+    border: 1px solid #dbdbdb;
+    border-radius: 32px;
+
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #8e8e8e;
+}
+
+.botao-de-enviar {
+    font-size: 22px;
+    color: #b2dffc;
+    transition: color 300ms;
+}
+
+.botao-de-enviar:hover {
+    color: #0095f6;
+}
+/* Classes ligadas a cada postagem individual */
+
+
+
+/* Em mobile, cada postagem tem largura de 100% da tela */
+@media (max-width: 614px) {
+    .postagens {
+        margin-top: 0px;
+    }
+
+    .post {
+        width: 100%;
+        margin-bottom: 60px;
+    
+        background-color: #ffffff;
+    
+        border-top: 1px solid #dbdbdb;
+        border-bottom: 1px solid #dbdbdb;
+        border-left: none;
+        border-right: none;
+        border-radius: 0px;
+    }
+}

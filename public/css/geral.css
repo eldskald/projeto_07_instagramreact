@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #fafafa;
+}
+
+strong {
+    font-weight: bold;
+}
+
+input:focus {
+    outline: none;
+}
+
+/* Essa classe vai conter os stories e as postagens */
+.conteudo {
+    width: 614px;
+}
+
+
+
+/* Pra mobile, a classe conteúdo tem que ter o tamanho da tela */
+@media (max-width: 614px) {
+    .conteudo {
+        width: 100%;
+    }
+}

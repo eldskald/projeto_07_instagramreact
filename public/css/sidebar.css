@@ -1,0 +1,151 @@
+
+.sidebar {  /* Essa div ocupa espaço para empurrar as postagens pra esquerda */
+    width: 293px;
+    margin-left: 29px;
+}
+
+.sidebar-fixa {  /* Essa é a que vai descer com o scroll bar, deve ser filha da .sidebar */
+    width: 293px;
+    height: 300px;
+
+    position: fixed;
+    top: 88px;
+    right: inherit;
+}
+
+/* Topo da sidebar, com usuário */
+.sidebar-topo {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-topo > img {
+    margin-right: 17px;
+}
+
+.nome {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.nome > h1 {
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #262626;
+}
+
+.nome > h2 {
+    font-family: "Roboto";
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    color: #8e8e8e;
+}
+/* Topo da sidebar, com usuário */
+
+/* Topo da sugestões, com um texto e o botão de ver tudo */
+.sugestoes-topo {
+    margin-top: 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sugestoes-topo > div:first-child {  /* Textinho da esquerda */
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #8e8e8e;
+}
+
+.sugestoes-topo > div:last-child {  /* Botão de ver tudo */
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #262626;
+}
+/* Topo da sugestões, com um texto e o botão de ver tudo */
+
+/* Sugestões */
+.sugestao {
+    margin-top: 16px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sugestao-conta {
+    display: flex;
+}
+
+.sugestao-conta > img {
+    margin-right: 11px;
+}
+
+.sugestao-nome {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sugestao-nome > h1 {
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #262626;
+}
+
+.sugestao-nome > h2 {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #8e8e8e;
+}
+
+.botao-de-seguir {
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #139ef2;
+}
+/* Sugestões */
+
+/* Fim da sidebar */
+.botoes-finais {
+    margin-top: 33px;
+    
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    color: #c7c7c7;
+}
+
+.copyright {
+    margin-top: 18px;
+    
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    color: #c7c7c7;
+}
+/* Fim da sidebar */
+
+
+/* Para telas com menos de 935px de largura, a sidebar some */
+@media (max-width: 935px) {
+    .sidebar {
+        display: none;
+    }
+}

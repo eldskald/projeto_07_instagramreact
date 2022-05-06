@@ -1,0 +1,121 @@
+
+.barra-topo {
+    width: 100%;
+    height: 54px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+
+    background-color: #ffffff;
+
+    border-style: none none solid none;
+    border-color: #dbdbdb;
+    border-width: 1px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.barra-topo > div {
+    width: 935px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo à esquerda da barra do topo */
+.logo {
+    font-size: 22px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo > img {
+    margin-left: 10px;
+    padding-left: 10px;
+    border-style: none none none solid;
+    border-color: #dbdbdb;
+    border-width: 1px;
+}
+/* Logo à esquerda da barra do topo */
+
+/* Logo mobile, no centro da barra em mobile */
+.logo-mobile {
+    display: none;
+}
+/* Logo mobile, no centro da barra em mobile */
+
+/* Barra de pesquisa no centro da barra do topo */    
+.barra-de-pesquisa {
+    width: 215px;
+    height: 25px;
+    background-color: #fafafa;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-style: solid;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+    color: #979797;
+}
+/* Barra de pesquisa no centro da barra do topo */    
+
+/* Menu na parte direita da barra do topo */
+.menu {
+    font-size: 22px;
+    letter-spacing: 22px;
+    display: flex;
+}
+
+.nao-mobile {  /* Esse cara desaparece em mobile */
+    display: initial;
+}
+
+.mobile {  /* Esse cara só aparece em mobile */
+    display: none;
+}
+/* Menu na parte direita da barra do topo */
+
+
+
+/* Telas abaixo de 935px de largura, o espaço na lateral da barra some */
+@media (max-width: 935px) {
+    .barra-topo > div {
+        width: 100%;
+        margin: 0px 20px;
+    }
+}
+
+
+/* Diminuímos o menu e o logo em telas de largura menor que 614 pixels */
+@media (max-width: 614px) {
+    .logo > img {
+        display: none;
+    }
+
+    .nao-mobile {
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+    }
+
+    .logo-mobile {
+        display: flex;
+    }
+
+    .barra-de-pesquisa {
+        display: none;
+    }
+}
