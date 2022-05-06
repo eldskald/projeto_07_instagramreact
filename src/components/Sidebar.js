@@ -1,4 +1,50 @@
 
+const user = {
+    name: "catanacomics",
+    subname: "Catana",
+    picture: "images/catanacomics.png"
+};
+
+const suggestions = [
+    {
+        name: "bad.vibes.memes",
+        picture: "images/badvibesmemes.png",
+        status: "Segue você"
+    },
+    {
+        name: "chibirdart",
+        picture: "images/chibirdart.png",
+        status: "Segue você"
+    },
+    {
+        name: "razoesparaacreditar",
+        picture: "images/razoesparaacreditar.png",
+        status: "Novo no Instagram"
+    },
+    {
+        name: "adorableanimals",
+        picture: "images/adorableanimals.png",
+        status: "Segue você"
+    },
+    {
+        name: "smallcutecats",
+        picture: "images/smallcutecats.png",
+        status: "Sgue você"
+    }
+];
+
+function User (props) {
+    return (
+        <div class="sidebar-topo">
+            <img src={props.picture} />
+            <div class="nome">
+                <h1>{props.name}</h1>
+                <h2>{props.subname}</h2>
+            </div>
+        </div>
+    );
+}
+
 function Suggested (props) {
     return (
         <div class="sugestao">
@@ -20,45 +66,25 @@ export default function Sidebar () {
     return (
         <div class="sidebar">
             <div class="sidebar-fixa">
-                <div class="sidebar-topo">
-                    <img src="images/catanacomics.png" />
-                    <div class="nome">
-                        <h1>catanacomics</h1>
-                        <h2>Catana</h2>
-                    </div>
-                </div>
+                <User
+                    name={user.name}
+                    subname={user.subname}
+                    picture={user.picture}
+                />
 
                 <div class="sugestoes-topo">
                     <div>Sugestões para você</div>
                     <div>Ver tudo</div>
                 </div>
 
-                <Suggested
-                    name="bad.vibes.memes"
-                    picture="images/badvibesmemes.png"
-                    status="Segue você"
-                />
-                <Suggested
-                    name="chibirdart"
-                    picture="images/chibirdart.png"
-                    status="Segue você"
-                />
-                <Suggested
-                    name="razoesparaacreditar"
-                    picture="images/razoesparaacreditar.png"
-                    status="Novo no Instagram"
-                />
-                <Suggested
-                    name="adorableanimals"
-                    picture="images/adorableanimals.png"
-                    status="Segue você"
-                />
-
-                <Suggested
-                    name="smallcutecats"
-                    picture="images/smallcutecats.png"
-                    status="Segue você"
-                />
+                {suggestions.map(function (suggested) {
+                    return (
+                    <Suggested
+                        name={suggested.name}
+                        picture={suggested.picture}
+                        status={suggested.status}
+                    />);
+                })};
 
                 <div class="botoes-finais">
                     Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade • Termos • Localizações • Contas mais relevantes • Hashtags • Idioma
