@@ -29,40 +29,40 @@ const suggestions = [
     {
         name: "smallcutecats",
         picture: "images/smallcutecats.png",
-        status: "Sgue você"
+        status: "Segue você"
     }
 ];
 
-function User (props) {
-    return (
-        <div class="sidebar-topo">
-            <img src={props.picture} />
-            <div class="nome">
-                <h1>{props.name}</h1>
-                <h2>{props.subname}</h2>
-            </div>
-        </div>
-    );
-}
-
-function Suggested (props) {
-    return (
-        <div class="sugestao">
-            <div class="sugestao-conta">
+export default function Sidebar () {
+    function User (props) {
+        return (
+            <div class="sidebar-topo">
                 <img src={props.picture} />
-                <div class="sugestao-nome">
+                <div class="nome">
                     <h1>{props.name}</h1>
-                    <h2>{props.status}</h2>
+                    <h2>{props.subname}</h2>
                 </div>
             </div>
-            <div class="botao-de-seguir">
-                Seguir
+        );
+    }
+    
+    function Suggested (props) {
+        return (
+            <div class="sugestao">
+                <div class="sugestao-conta">
+                    <img src={props.picture} />
+                    <div class="sugestao-nome">
+                        <h1>{props.name}</h1>
+                        <h2>{props.status}</h2>
+                    </div>
+                </div>
+                <div class="botao-de-seguir">
+                    Seguir
+                </div>
             </div>
-        </div>
-    );
-}
+        );
+    }
 
-export default function Sidebar () {
     return (
         <div class="sidebar">
             <div class="sidebar-fixa">
@@ -84,7 +84,7 @@ export default function Sidebar () {
                         picture={suggested.picture}
                         status={suggested.status}
                     />);
-                })};
+                })}
 
                 <div class="botoes-finais">
                     Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade • Termos • Localizações • Contas mais relevantes • Hashtags • Idioma
