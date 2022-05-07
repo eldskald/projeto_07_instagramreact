@@ -1,3 +1,4 @@
+import React from "react";
 
 const posts = [
     {
@@ -116,6 +117,29 @@ export default function Feed () {
     }
 
     function Post (props) {
+        const [liked, setLiked] = React.useState(false);
+
+        function LikeButton () {
+            console.log("aaaaaaaaaa");
+            if (liked) {
+                return (
+                    <ion-icon
+                        name="heart"
+                        class="botao-like-preenchido"
+                        onClick={() => setLiked(false)}
+                    ></ion-icon>
+                );
+            }
+            else {
+                return (
+                    <ion-icon
+                        name="heart-outline"
+                        onClick={() => setLiked(true)}
+                    ></ion-icon>
+                );
+            }
+        }
+        
         return (
             <div class="post">
                 <div class="post-topo">
@@ -133,7 +157,7 @@ export default function Feed () {
                 <div class="post-baixo">
                     <div>
                         <div>
-                            <ion-icon name="heart-outline"></ion-icon>
+                            <LikeButton />
                             <ion-icon name="chatbubble-outline"></ion-icon>
                             <ion-icon name="paper-plane-outline"></ion-icon>
                         </div>

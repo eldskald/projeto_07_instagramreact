@@ -98,6 +98,11 @@
     color: #000000;
 }
 
+/* Botão de like para o bônus do projeto 7! */
+.botao-like-preenchido {
+    color: rgb(238, 41, 84);
+}
+
 /* Comentários! Olhei algumas fotos de referência e escolhi */
 /* os números no olhômetro mesmo. */
 .comentarios-container {
